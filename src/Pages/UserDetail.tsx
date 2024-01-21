@@ -15,13 +15,13 @@ const Signin: React.FC = () => {
             if (!response.ok) {
                 return;
             }
-            
+
             const user = await response.json();
             setLoadedUser(user);
         }
 
         fetchUser();
-        
+
     }, []);
 
 
@@ -43,17 +43,10 @@ const Signin: React.FC = () => {
                             id: {loadedUser.id}
                         </div>
                         <div className="m-10">
-                            first name: {loadedUser.name.firstName}
-                            last name: {loadedUser.name.lastName}
-                        </div>
-                        <div className="m-10">
                             password: {loadedUser.password}
                         </div>
                         <div className="m-10">
                             phone number: {loadedUser.phone}
-                        </div>
-                        <div className="m-10">
-                            user name: {loadedUser.userName}
                         </div>
 
                     </span>
@@ -61,12 +54,12 @@ const Signin: React.FC = () => {
             );
 
         }
-        else{
+        else {
             return (
                 <p className="text-l text-center text-darkGrey">loading data...</p>
             )
         }
-        
+
 
     }
 
