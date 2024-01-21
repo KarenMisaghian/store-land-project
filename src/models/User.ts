@@ -19,8 +19,6 @@ class User {
     phone: string;
     userName: string;
 
-
-    
     constructor(id: number , email: string, phone: string, userName: string, password: string, address: address, name: name){
         this.address = address;
         this.email = email;
