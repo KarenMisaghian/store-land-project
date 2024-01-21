@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 
 const Header: React.FC = () => {
 
-
     return <>
         <header className="flex flex-col">
             <div className="text-center text-2xl bg-gradient-to-b from-tahiti via-bermuda to-blue1 text-purple text-[50px] pb-[20px] pt-[18px] ">Store Land</div>

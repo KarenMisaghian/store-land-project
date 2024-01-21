@@ -2,8 +2,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import HomePage from './Pages/Home';
 import RootLayout from './Pages/Root';
+import ProductPage from './Pages/Products';
 import Signin from './Pages/UserDetail';
-
 
 
 const router = createBrowserRouter([
@@ -12,6 +12,15 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <HomePage /> },
+      {
+        path: 'products',
+        children: [
+          {
+            index: true,
+            element: <ProductPage />,
+          },
+        ],
+      },
       {
         path: 'signin',
         children: [
@@ -28,7 +37,7 @@ const router = createBrowserRouter([
 function App() {
 
   return (
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
 
   );
 }
