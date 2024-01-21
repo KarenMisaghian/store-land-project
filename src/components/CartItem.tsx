@@ -25,13 +25,16 @@ const CartItem: React.FC<{ number: number }> = (props) => {
                     {description[props.number]}
                 </td>
                 <td className="text-center items-center birder-2 p-2 w-[150px]">
+                    <button className="bg-red rounded-full ml-2 w-5 hover:bg-red2" onClick={() => decreaseItemQuantity(product[props.number])}>-</button>
                     <span className="p-2">{quantity[props.number]}</span>
+                    <button className="bg-red rounded-full ml-2 w-5 hover:bg-red2" onClick={() => increaseItemQuantity(product[props.number])}>+</button>
                 </td>
                 <td className="text-center items-center border-2 p-2 w-[100px]">
                     {price[props.number]}
                 </td>
                 <td className="text-center items-center border-2 p-2 w-[150px]">
                     <span>{price[props.number] * quantity[props.number]}</span>
+                    <button className="bg-red rounded-lg ml-2 hover:bg-red2" onClick={() => removeFromCart(product[props.number])}>delete</button>
                 </td>
             </tr>
         </>
