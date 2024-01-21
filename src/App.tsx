@@ -3,6 +3,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import HomePage from './Pages/Home';
 import RootLayout from './Pages/Root';
 import ProductPage from './Pages/Products';
+import { ShoppingCartProvider } from './store/CartContext';
 import Signin from './Pages/UserDetail';
 
 
@@ -37,7 +38,9 @@ const router = createBrowserRouter([
 function App() {
 
   return (
-    <RouterProvider router={router} />
+    <ShoppingCartProvider>
+      <RouterProvider router={router} />
+    </ShoppingCartProvider>
 
   );
 }
