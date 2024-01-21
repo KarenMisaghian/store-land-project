@@ -5,6 +5,7 @@ import RootLayout from './Pages/Root';
 import ProductPage from './Pages/Products';
 import { ShoppingCartProvider } from './store/CartContext';
 import Signin from './Pages/UserDetail';
+import Cart from './Pages/Cart';
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,15 @@ const router = createBrowserRouter([
             element: <Signin />
           },
         ],
+      },
+      {
+        path: 'cart',
+        children: [
+          {
+            index: true,
+            element: <Cart />
+          }
+        ]
       }
     ],
   },
