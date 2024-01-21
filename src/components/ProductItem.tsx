@@ -1,8 +1,10 @@
 import Product from "../models/Product";
+import { useShoppingCart } from "../store/CartContext";
 
 
 
 const ProductItem: React.FC<{ product: Product }> = ({ product }) => {
+    const {increaseItemQuantity} = useShoppingCart();
     return (
         <li>
             <article className="w-[400px] max-h-[1000px] shadow-2xl flex flex-col justify-evenly m-[10px] hover:border-2 pb-10">
@@ -13,7 +15,7 @@ const ProductItem: React.FC<{ product: Product }> = ({ product }) => {
                 </div>
                 <div className=" flex justify-evenly text-xl">
                     <p >{`${product.price} $`}</p>
-                    <button className=" bg-blue1 border-none rounded-lg p-1 hover:bg-bermuda" >Add to Cart</button>
+                    <button className=" bg-blue1 border-none rounded-lg p-1 hover:bg-bermuda" onClick={() => increaseItemQuantity(product)} >Add to Cart</button>
                 </div>
             </article>
         </li>

@@ -1,8 +1,11 @@
 import userIcon from "../assets/userIcon.png"
 import logo from "../assets/brandIcon.png"
+import { useShoppingCart } from "../store/CartContext"
 import { NavLink } from 'react-router-dom';
 
 const Header: React.FC = () => {
+    const { cartQuantity } = useShoppingCart();
+
 
     return <>
         <header className="flex flex-col">
@@ -31,7 +34,7 @@ const Header: React.FC = () => {
                     </NavLink>
 
 
-                    <span className="bg-red rounded-full">number</span></div>
+                    <span className="bg-red rounded-full">{cartQuantity}</span></div>
             </div>
         </header>
 
