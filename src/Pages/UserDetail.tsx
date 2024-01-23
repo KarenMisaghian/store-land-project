@@ -28,7 +28,7 @@ const Signin: React.FC = () => {
     const UserInfo = () => {
         if (loadedUser) {
             return (
-                <>
+                <div className="mt-[300px]">
                     <span className="text-center text-xl text-darkGrey bg-blue1">
                         <div className="m-10 text-2xl">
                             Your Informations:
@@ -50,13 +50,13 @@ const Signin: React.FC = () => {
                         </div>
 
                     </span>
-                </>
+                </div>
             );
 
         }
         else {
             return (
-                <p className="text-l text-center text-darkGrey">loading data...</p>
+                <p className="text-l text-center text-darkGrey mt-[300px]">loading data...</p>
             )
         }
 
@@ -64,7 +64,10 @@ const Signin: React.FC = () => {
     }
 
     return (
-        <UserInfo />
+        <div className="mt-300px">
+             <UserInfo />
+        </div>
+       
     );
 }
 
