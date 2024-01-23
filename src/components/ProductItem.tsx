@@ -6,8 +6,8 @@ import { useShoppingCart } from "../store/CartContext";
 const ProductItem: React.FC<{ product: Product }> = ({ product }) => {
     const {increaseItemQuantity} = useShoppingCart();
     return (
-        <li>
-            <article className="w-[400px] max-h-[1000px] shadow-2xl flex flex-col justify-evenly m-[10px] hover:border-2 pb-10">
+        <li className="flex justify-between">
+            <article className="w-[400px] shadow-2xl flex flex-col justify-between m-[10px] hover:border-2 py-5 ">
                 <img src={product.image} alt={product.title} className="max-h-[400px] text-center block" />
                 <div>
                     <h3 className="text-center text-l mb-[7px]">{product.title}</h3>

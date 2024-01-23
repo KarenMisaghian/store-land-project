@@ -11,9 +11,9 @@ const Cart: React.FC = () => {
     const ListOfItems = () => {
         if (cartItems.length > 0) {
             return (
-                <>
-                    <h2 className="text-center text-xl mb-[50px]">Your Cart: </h2>
-                    <table>
+                <div className="mt-[300px]">
+                    <h2 className="text-center text-xl mb-[50px] flex justify-center">Your Cart: </h2>
+                    <table className="text-[6px] sm:text-[10px] md:text-[20px]">
                         <thead className="border-2">
                             <th className="border-2">number</th>
                             <th className="border-2">Title</th>
@@ -34,12 +34,12 @@ const Cart: React.FC = () => {
                             <td className="text-center">{totalCost}</td>
                         </tfoot>
                     </table>
-                </>
+                </div>
             );
         }
         else {
             return (
-                <p className="text-center text-2xl text-darkGrey" >You have not selected any item!</p>
+                <p className="text-center text-2xl text-darkGrey mt-[300px]" >You have not selected any item!</p>
             );
 
         }

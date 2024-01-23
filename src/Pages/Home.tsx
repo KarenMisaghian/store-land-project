@@ -1,6 +1,6 @@
 function HomePage() {
   return (
-      <div className="flex flex-col justify-center bg-white text-darkGrey text-center">
+      <div className="flex flex-col justify-center bg-white text-darkGrey text-center mt-[300px]">
         <h1 className="text-[150px]">Welcome!</h1>
         <div>Browse all our amazing products!</div>
       </div>

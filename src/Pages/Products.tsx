@@ -32,7 +32,7 @@ const Products: React.FC = () => {
 
             const products = await response.json();
             setLoadedProducts(products);
-            
+
         }
 
         fetchProducts();
@@ -52,8 +52,8 @@ const Products: React.FC = () => {
 
         if (loadedProducts.length > 0) {
             return (
-                <>
-                    <div className="flex flex-row justify-evenly mb-10">
+                <div className="mt-[300px]">
+                    <div className="flex flex-row justify-evenly my-10">
                         <form onSubmit={submitHandler} className="text-center flex flex-row">
                             <input type="text" id="text" ref={searchInput} className="border-2 rounded-md" placeholder="search..." />
                             <button className="bg-blue1 rounded-lg p-2 hover:bg-bermuda">Submit Search</button>
@@ -69,22 +69,24 @@ const Products: React.FC = () => {
                     </div>
 
 
-                    <ul className="flex flex-wrap justify-evenly items-center">
+
+                    <ul className="flex flex-wrap justify-evenly">
                         {filteredProducts.map((product) => (
                             <ProductItem key={product.id} product={product} />
                         ))}
                     </ul>
-                </>
+
+                </div>
 
             );
 
         }
-        else{
+        else {
             return (
-                <p className="text-l text-center text-darkGrey">loading data...</p>
+                <p className="text-l text-center text-darkGrey mt-[300px]">loading data...</p>
             );
         }
-        
+
     };
 
     return (
